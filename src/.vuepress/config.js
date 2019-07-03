@@ -1,4 +1,11 @@
 module.exports = {
   title: 'shibayan.jp',
-  ga: 'UA-772309-13'
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-772309-13'
+      }
+    ]
+  ]
 }

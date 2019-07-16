@@ -6,32 +6,54 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '10.x'
+      displayName: 'Install Node.js'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+    - script: |
+        npm install
+        npm run build -- --dest dist
+      displayName: 'npm install and build'
 
-- script: |
-    npm install
-    npm run build -- --dest dist
-  displayName: 'npm install and build'
+    - task: ArchiveFiles@2
+      inputs:
+        rootFolderOrFile: '$(Build.SourcesDirectory)/dist'
+        includeRootFolder: false
+        archiveType: 'zip'
+        archiveFile: '$(Build.DefaultWorkingDirectory)/dist.zip'
+        replaceExistingArchive: true
+      displayName: 'Archive artifact'
 
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(Build.SourcesDirectory)/dist'
-    includeRootFolder: false
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildNumber).zip'
-    replaceExistingArchive: true
-  displayName: 'Archive artifact'
+    - publish: dist.zip
+      artifact: site
+      displayName: 'Publish artifact'
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
-  displayName: 'Publish artifact'
+- stage: Deploy
+  dependsOn:
+  - Build
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
+  jobs:
+  - job: Deploy
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - download: current
+      artifact: site
+      displayName: 'Download artifact'
+
+    - task: AzureWebApp@1
+      inputs:
+        azureSubscription: 'Visual Studio Enterprise'
+        appType: 'webApp'
+        appName: 'shibayan'
+        package: '$(Pipeline.Workspace)/site/*.zip'
+        deploymentMethod: 'runFromPackage'
+      displayName: 'Deploy to Web App'

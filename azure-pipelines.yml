@@ -45,20 +45,19 @@ stages:
   - Build
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   jobs:
-  - job: Deploy
+  - deployment: Deploy
+    environment: production
     pool:
       vmImage: 'ubuntu-latest'
-    steps:
-    - checkout: none
-    - download: current
-      artifact: site
-      displayName: 'Download artifact'
-
-    - task: AzureWebApp@1
-      inputs:
-        azureSubscription: 'Visual Studio Enterprise'
-        appType: 'webApp'
-        appName: 'shibayan'
-        package: '$(Pipeline.Workspace)/site/*.zip'
-        deploymentMethod: 'runFromPackage'
-      displayName: 'Deploy to Web App'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: 'Visual Studio Enterprise'
+              appType: 'webApp'
+              appName: 'shibayan'
+              package: '$(Pipeline.Workspace)/site/*.zip'
+              deploymentMethod: 'runFromPackage'
+            displayName: 'Deploy to Web App'

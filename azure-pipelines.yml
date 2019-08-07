@@ -29,11 +29,10 @@ stages:
 
     - task: ArchiveFiles@2
       inputs:
-        rootFolderOrFile: '$(Build.SourcesDirectory)/dist'
+        rootFolderOrFile: 'dist'
         includeRootFolder: false
         archiveType: 'zip'
-        archiveFile: '$(System.DefaultWorkingDirectory)/dist.zip'
-        replaceExistingArchive: true
+        archiveFile: 'dist.zip'
       displayName: 'Archive artifact'
 
     - publish: dist.zip

@@ -11,10 +11,10 @@ stages:
     pool:
       vmImage: 'ubuntu-latest'
     steps:
-    - task: NodeTool@0
+    - task: UseNode@1
       inputs:
-        versionSpec: '10.x'
-      displayName: 'Install Node.js'
+        version: '10.x'
+      displayName: 'Install Node.js 10.x'
 
     - task: CacheBeta@0
       inputs:

@@ -26,3 +26,4 @@ title: 'Home'
 [![Twitter](./images/twitter.png)](https://twitter.com/shibayan)
 [![Hatena Blog](./images/hatenablog.png)](https://blog.shibayan.jp)
 [![GitHub](./images/github.png)](https://github.com/shibayan)
+[![SpeakerDeck](./images/speakerdeck.png)](https://speakerdeck.com/shibayan)

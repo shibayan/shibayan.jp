@@ -13,12 +13,15 @@ stages:
     steps:
     - task: UseNode@1
       inputs:
-        version: '10.x'
-      displayName: 'Install Node.js 10.x'
+        version: '12.x'
+      displayName: 'Install Node.js 12.x'
 
-    - task: CacheBeta@0
+    - task: Cache@2
       inputs:
-        key: $(Build.SourcesDirectory)/package-lock.json
+        key: 'npm | "$(Agent.OS)" | package-lock.json'
+        restoreKeys: |
+           npm | "$(Agent.OS)"
+           npm
         path: $(npm_config_cache)
       displayName: Cache npm
 

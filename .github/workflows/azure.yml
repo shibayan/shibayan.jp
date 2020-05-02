@@ -31,7 +31,7 @@ jobs:
     - name: npm ci and build
       run: |
         npm ci
-        npm run build -- --dest dist
+        npm run build -- --dest ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
     - name: Deploy to Azure WebApp
       uses: azure/webapps-deploy@v2

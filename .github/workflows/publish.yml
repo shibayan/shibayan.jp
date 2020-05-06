@@ -1,7 +1,8 @@
+name: Publish
+
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
 
 env:
   AZURE_WEBAPP_NAME: shibayan
@@ -9,8 +10,7 @@ env:
   NODE_VERSION: '12.x'
 
 jobs:
-  build-and-deploy:
-    name: Build and Deploy
+  publish:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2

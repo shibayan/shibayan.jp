@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'shibayan.jp',
+  title: 'Tatsuro Shibamura',
   plugins: [
     [
       '@vuepress/google-analytics',

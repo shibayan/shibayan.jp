@@ -43,3 +43,4 @@ Tatsuro Shibamura a.k.a. shibayan / Developer / Azure Serverless / Windows on AR
 [![Hatena Blog](./images/hatenablog.png)](https://blog.shibayan.jp)
 [![GitHub](./images/github.png)](https://github.com/shibayan)
 [![SpeakerDeck](./images/speakerdeck.png)](https://speakerdeck.com/shibayan)
+[![SpeakerDeck](./images/linkedin.png)](https://www.linkedin.com/in/tatsuro-shibamura/)

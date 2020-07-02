@@ -37,7 +37,7 @@ Tatsuro Shibamura a.k.a. shibayan / Developer / Azure Serverless / Windows on AR
 - Microsoft MVP for ASP.NET/IIS
   - 2011 ~ 2015
 
-## Network
+## Connect
 
 [![Twitter](./images/twitter.png)](https://twitter.com/shibayan)
 [![Hatena Blog](./images/hatenablog.png)](https://blog.shibayan.jp)

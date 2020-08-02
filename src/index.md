@@ -37,6 +37,11 @@ Tatsuro Shibamura a.k.a. shibayan / Developer / Azure Serverless / Windows on AR
 - Microsoft MVP for ASP.NET/IIS
   - 2011 ~ 2015
 
+## Certified
+
+[![Microsoft Certified: Azure Developer Associate](./images/microsoft-certified-azure-developer-associate.png)](https://www.youracclaim.com/badges/b11ad743-c32d-49ee-9a35-c9988ff8405e/public_url)
+[![Microsoft Certified: DevOps Engineer Expert](./images/microsoft-certified-devops-engineer-expert.png)](https://www.youracclaim.com/badges/4ab50eff-b218-4a5d-90fa-13075198717c/public_url)
+
 ## Connect
 
 [![Twitter](./images/twitter.png)](https://twitter.com/shibayan)

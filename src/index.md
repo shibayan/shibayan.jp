@@ -2,10 +2,6 @@
 title: 'Profile'
 ---
 
-# Profile
-
----
-
 ![Tatsuro Shibamura](./images/shibayan.jpg)
 
 Tatsuro Shibamura a.k.a. shibayan / Developer / Azure Serverless / Windows on ARM Enthusiast

@@ -35,6 +35,7 @@ Tatsuro Shibamura a.k.a. shibayan / Developer / Azure Serverless / Windows on AR
 
 ## Certified
 
+[![Microsoft Certified: Azure Administrator Associate](./images/microsoft-certified-azure-administrator-associate-az-104.png)](https://www.youracclaim.com/badges/f53f2068-650b-4da9-92a7-37799179996a/public_url)
 [![Microsoft Certified: Azure Developer Associate](./images/microsoft-certified-azure-developer-associate.png)](https://www.youracclaim.com/badges/b11ad743-c32d-49ee-9a35-c9988ff8405e/public_url)
 [![Microsoft Certified: Azure Security Engineer Associate](./images/microsoft-certified-azure-security-engineer-associate.png)](https://www.youracclaim.com/badges/d495a3e9-04b6-4649-99d1-d0ce24a57590/public_url)
 [![Microsoft Certified: Azure Solutions Architect Expert](./images/microsoft-certified-azure-solutions-architect-expert.png)](https://www.youracclaim.com/badges/1fbdd367-f4c1-4985-b3f0-c2b65eee748f/public_url)

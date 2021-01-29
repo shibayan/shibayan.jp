@@ -6,21 +6,9 @@ title: 'Profile'
 
 Tatsuro Shibamura a.k.a. shibayan / Developer / Azure Serverless / Windows on ARM Enthusiast
 
-## Activity
+## Open Source
 
-### Azure
-
-- App Service Acmebot
-- Key Vault Acmebot
-- HTTP API Extensions for Azure Functions v3
-- IIS.Compression Site Extension
-- IIS Manager Site Extension
-
-### C# / .NET
-
-- Sharprompt
-- WinQuickLook
-- CsvHelper.FastDynamic
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=shibayan&count_private=true&show_icons=true)
 
 ## Awards
 

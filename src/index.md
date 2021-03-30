@@ -8,7 +8,7 @@ Tatsuro Shibamura a.k.a. shibayan / Developer / Azure Serverless / Windows on AR
 
 ## Open Source
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=shibayan&count_private=true&show_icons=true)
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=shibayan&count_private=true&show_icons=true)](https://github.com/shibayan)
 
 ## Awards
 

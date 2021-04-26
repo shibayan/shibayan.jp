@@ -12,5 +12,6 @@ module.exports = {
     nav: [
       { text: 'GitHub', link: 'https://github.com/shibayan/shibayan.jp' }
     ]
-  }
+  },
+  evergreen: true
 }

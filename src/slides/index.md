@@ -6,14 +6,14 @@ title: 'Slides'
 
 ### Cosmos DB Conf
 
-<slide src="./cosmosdbconf" />
+<slide id="cosmosdbconf" />
 
 ### Hack Azure! #5
 
-<slide src="./hackazure5" />
+<slide id="hackazure5" />
 
 ## 2020
 
 ### .NET Conf Online
 
-<slide src="./dotnetconf" />
+<slide id="dotnetconf" />

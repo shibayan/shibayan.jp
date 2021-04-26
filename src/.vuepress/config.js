@@ -10,7 +10,8 @@ module.exports = {
   ],
   themeConfig: {
     nav: [
-      { text: 'GitHub', link: 'https://github.com/shibayan/shibayan.jp' }
+      { text: 'Slides', link: '/slides/' },
+      { text: 'GitHub', link: 'https://github.com/shibayan/shibayan.jp', target:'_blank' }
     ]
   },
   evergreen: true

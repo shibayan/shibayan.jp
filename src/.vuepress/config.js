@@ -1,5 +1,6 @@
 module.exports = {
   title: 'Tatsuro Shibamura',
+  description: 'Tatsuro Shibamura a.k.a. shibayan / Developer / Azure Serverless / Windows on ARM Enthusiast',
   plugins: [
     [
       '@vuepress/google-analytics',

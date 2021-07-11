@@ -1,8 +1,8 @@
 import * as path from 'path';
-import { defineUserConfig } from 'vuepress'
-import type { DefaultThemeOptions } from 'vuepress'
+import { defineUserConfig } from 'vuepress-vite'
+import type { DefaultThemeOptions, ViteBundlerOptions } from 'vuepress-vite'
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig<DefaultThemeOptions, ViteBundlerOptions>({
   title: 'Tatsuro Shibamura',
   description: 'Tatsuro Shibamura a.k.a. shibayan / Developer / Azure Serverless / Windows on ARM Enthusiast',
   plugins: [
@@ -19,13 +19,14 @@ export default defineUserConfig<DefaultThemeOptions>({
       },
     ],
   ],
+  bundler: '@vuepress/vite',
   themeConfig: {
     contributors: false,
     lastUpdated: false,
     sidebar: false,
     navbar: [
       { text: 'Slides', link: '/slides/' },
-      { text: 'GitHub', link: 'https://github.com/shibayan/shibayan.jp', target:'_blank' }
+      { text: 'GitHub', link: 'https://github.com/shibayan/shibayan.jp', target: '_blank' }
     ]
   }
 });

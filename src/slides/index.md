@@ -4,6 +4,10 @@ title: 'Slides'
 
 ## 2021
 
+### HashiTalks: Japan
+
+<Slide id="hashitalks" />
+
 ### Cosmos DB Conf
 
 <Slide id="cosmosdbconf" />

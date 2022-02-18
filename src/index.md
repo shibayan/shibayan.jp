@@ -2,7 +2,7 @@
 title: 'Profile'
 ---
 
-![Tatsuro Shibamura](./images/shibayan.jpg)
+![Tatsuro Shibamura](./images/shibayan.jpg) ![Tatsuro Shibamura](./images/shibayan_2.png)
 
 Tatsuro Shibamura a.k.a. shibayan<br>
 Developer / Microsoft MVP for Microsoft Azure / Windows on ARM Enthusiast

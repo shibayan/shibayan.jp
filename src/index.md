@@ -29,6 +29,7 @@ Developer / Microsoft MVP for Microsoft Azure / Windows on ARM Enthusiast
 [![Microsoft Certified: Azure Security Engineer Associate](./images/microsoft-certified-azure-security-engineer-associate.png)](https://www.credly.com/badges/d495a3e9-04b6-4649-99d1-d0ce24a57590/public_url)
 [![Microsoft Certified: Azure Solutions Architect Expert](./images/microsoft-certified-azure-solutions-architect-expert.png)](https://www.credly.com/badges/1fbdd367-f4c1-4985-b3f0-c2b65eee748f/public_url)
 [![Microsoft Certified: DevOps Engineer Expert](./images/microsoft-certified-devops-engineer-expert.png)](https://www.credly.com/badges/4ab50eff-b218-4a5d-90fa-13075198717c/public_url)
+[![Microsoft Certified: Azure Cosmos DB Developer Specialty](./images/microsoft-certified-azure-cosmos-db-developer-specialty.png)](https://www.credly.com/badges/9faf0ae5-308a-495f-a5da-174ef319b187/public_url)
 
 ## Connect
 

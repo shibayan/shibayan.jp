@@ -1,31 +1,27 @@
 import * as path from 'path';
 import { defineUserConfig } from 'vuepress'
-import type { DefaultThemeOptions } from 'vuepress'
+import { defaultTheme } from 'vuepress';
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig({
   title: 'Tatsuro Shibamura',
   description: 'Tatsuro Shibamura a.k.a. shibayan / Developer / Azure Serverless / Windows on ARM Enthusiast',
   plugins: [
-    [
-      '@vuepress/plugin-google-analytics',
-      {
-        'id': 'UA-772309-13'
-      }
-    ],
-    [
-      '@vuepress/register-components',
-      {
-        componentsDir: path.resolve(__dirname, './components'),
-      },
-    ],
+    googleAnalyticsPlugin({
+      'id': 'UA-772309-13'
+    }),
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, './components'),
+    })
   ],
-  themeConfig: {
+  theme: defaultTheme({
     contributors: false,
     lastUpdated: false,
     sidebar: false,
     navbar: [
       { text: 'Slides', link: '/slides/' },
-      { text: 'GitHub', link: 'https://github.com/shibayan/shibayan.jp', target:'_blank' }
+      { text: 'GitHub', link: 'https://github.com/shibayan/shibayan.jp', target: '_blank' }
     ]
-  }
+  })
 });

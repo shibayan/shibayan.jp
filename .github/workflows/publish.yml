@@ -13,10 +13,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Use Node.js ${{ env.NODE_VERSION }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ env.NODE_VERSION }}
         cache: npm
@@ -27,7 +27,7 @@ jobs:
         npm run build -- --dest ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: dist
         path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
@@ -40,7 +40,7 @@ jobs:
       url: https://shibayan.jp
     steps:
     - name: Download artifact
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: dist
         path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}

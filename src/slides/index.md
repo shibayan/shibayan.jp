@@ -4,6 +4,10 @@ title: 'Slides'
 
 ## 2022
 
+## .NET Conf 2022 Recap 福岡
+
+<Slide id="dotnetconf2022" />
+
 ### Digital Decision 2022 Engineer Night
 
 <Slide id="engineernight" />

@@ -20,8 +20,11 @@ export default defineUserConfig({
     lastUpdated: false,
     sidebar: false,
     navbar: [
-      { text: 'Slides', link: '/slides/' },
-      { text: 'GitHub', link: 'https://github.com/shibayan/shibayan.jp', target: '_blank' }
-    ]
+      { text: 'Presentations', link: '/slides/' },
+      { text: 'Become a sponsor', link: 'https://github.com/sponsors/shibayan', target: '_blank' }
+    ],
+    themePlugins: {
+      externalLinkIcon: false
+    }
   })
 });

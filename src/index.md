@@ -1,12 +1,12 @@
 ---
-title: 'Profile'
+title: ''
 ---
 
 ## About me
 
 ![Tatsuro Shibamura](./images/shibayan.jpg) ![Tatsuro Shibamura](./images/shibayan_alt.png)
 
-**Tatsuro Shibamura a.k.a. shibayan**<br>
+**Tatsuro Shibamura (shibayan)**<br>
 Developer / Microsoft MVP for Microsoft Azure / Windows on ARM Enthusiast
 
 | <img align="center" src="https://github-readme-stats.vercel.app/api?username=shibayan&show_icons=true&include_all_commits=true&hide_border=true" alt="Anurag's github stats" /> | <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=shibayan&layout=compact&hide_border=true" /> |
@@ -29,9 +29,10 @@ Developer / Microsoft MVP for Microsoft Azure / Windows on ARM Enthusiast
 
 <dl>
   <dt>Microsoft Top Partner Engineer Award &lt;Azure&gt;</dt>
+  <dd>2023 ~ 2024</dd>
 </dl>
 
-## Certified
+## Certifications
 
 [![Microsoft Certified: Azure Administrator Associate](./images/microsoft-certified-azure-administrator-associate-az-104.png)](https://www.credly.com/badges/f53f2068-650b-4da9-92a7-37799179996a/public_url)
 [![Microsoft Certified: Azure Developer Associate](./images/microsoft-certified-azure-developer-associate.png)](https://www.credly.com/badges/b11ad743-c32d-49ee-9a35-c9988ff8405e/public_url)
@@ -42,7 +43,7 @@ Developer / Microsoft MVP for Microsoft Azure / Windows on ARM Enthusiast
 [![GitHub Actions](./images/github-actions.png)](https://www.credly.com/badges/ca969fde-9a0e-4198-9541-2458e932dd98/public_url)
 [![GitHub Advanced Security](./images/github-advanced-security.png)](https://www.credly.com/badges/bdbb4a67-2494-43dd-af28-371329a05f41/public_url)
 
-## Connect
+## Connections
 
 [![Twitter](./images/twitter.png)](https://twitter.com/shibayan)
 [![GitHub](./images/github.png)](https://github.com/shibayan)

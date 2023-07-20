@@ -1,28 +1,38 @@
 ---
-title: 'Profile'
+title: ''
 ---
 
-![Tatsuro Shibamura](./images/shibayan.jpg) ![Tatsuro Shibamura](./images/shibayan_2.png)
+## About me
 
-Tatsuro Shibamura a.k.a. shibayan<br>
+![Tatsuro Shibamura](./images/shibayan.jpg) ![Tatsuro Shibamura](./images/shibayan_alt.png)
+
+**Tatsuro Shibamura (shibayan)**<br>
 Developer / Microsoft MVP for Microsoft Azure / Windows on ARM Enthusiast
 
-## Open Source
-
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=shibayan&count_private=true&show_icons=true)](https://github.com/shibayan)
+| <img align="center" src="https://github-readme-stats.vercel.app/api?username=shibayan&show_icons=true&include_all_commits=true&hide_border=true" alt="Anurag's github stats" /> | <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=shibayan&layout=compact&hide_border=true" /> |
+| ------------- | ------------- |
 
 ## Awards
 
-[![Microsoft MVP](./images/msmvp.png)](https://mvp.microsoft.com/en-us/PublicProfile/4032161)
+[![Microsoft MVP](./images/microsoft-most-valuable-professional-mvp.png)](https://mvp.microsoft.com/en-us/PublicProfile/4032161)
 
-- Microsoft MVP for Microsoft Azure
-  - 2018 ~ 2024
-- Microsoft MVP for Visual Studio and Development Technologies
-  - 2015 ~ 2018
-- Microsoft MVP for ASP.NET/IIS
-  - 2011 ~ 2015
+<dl>
+  <dt>Microsoft MVP for Microsoft Azure</dt>
+  <dd>2018 ~ 2024</dd>
+  <dt>Microsoft MVP for Visual Studio and Development Technologies</dt>
+  <dd>2015 ~ 2018</dd>
+  <dt>Microsoft MVP for ASP.NET/IIS</dt>
+  <dd>2011 ~ 2015</dd>
+</dl>
 
-## Certified
+![Microsoft Top Partner Engineer Award](./images/top-partner-engineer-award.png)
+
+<dl>
+  <dt>Microsoft Top Partner Engineer Award &lt;Azure&gt;</dt>
+  <dd>2023 ~ 2024</dd>
+</dl>
+
+## Certifications
 
 [![Microsoft Certified: Azure Administrator Associate](./images/microsoft-certified-azure-administrator-associate-az-104.png)](https://www.credly.com/badges/f53f2068-650b-4da9-92a7-37799179996a/public_url)
 [![Microsoft Certified: Azure Developer Associate](./images/microsoft-certified-azure-developer-associate.png)](https://www.credly.com/badges/b11ad743-c32d-49ee-9a35-c9988ff8405e/public_url)
@@ -33,11 +43,11 @@ Developer / Microsoft MVP for Microsoft Azure / Windows on ARM Enthusiast
 [![GitHub Actions](./images/github-actions.png)](https://www.credly.com/badges/ca969fde-9a0e-4198-9541-2458e932dd98/public_url)
 [![GitHub Advanced Security](./images/github-advanced-security.png)](https://www.credly.com/badges/bdbb4a67-2494-43dd-af28-371329a05f41/public_url)
 
-## Connect
+## Connections
 
-[![Hatena Blog](./images/hatenablog.png)](https://blog.shibayan.jp)
 [![Twitter](./images/twitter.png)](https://twitter.com/shibayan)
-[![DEV Profile](./images/dev.png)](https://dev.to/shibayan)
 [![GitHub](./images/github.png)](https://github.com/shibayan)
-[![SpeakerDeck](./images/speakerdeck.png)](https://speakerdeck.com/shibayan)
 [![LinkedIn](./images/linkedin.png)](https://www.linkedin.com/in/tatsuro-shibamura/)
+[![Hatena Blog](./images/hatenablog.png)](https://blog.shibayan.jp)
+[![DEV Profile](./images/dev.png)](https://dev.to/shibayan)
+[![SpeakerDeck](./images/speakerdeck.png)](https://speakerdeck.com/shibayan)

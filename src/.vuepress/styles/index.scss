@@ -1,0 +1,33 @@
+:root {
+  --content-width: 820px;
+}
+
+main {
+  text-align: center;
+}
+
+h2 {
+  border: 0;
+  padding: 0.5rem;
+}
+
+a[target='_blank'] > img {
+  margin: 0.2rem 0.4rem;
+}
+
+img[alt='Tatsuro Shibamura'] {
+	border-radius: 50%;
+  margin: 0 1rem;
+}
+
+dl {
+  line-height: 1.7;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-inline-start: 0;
+}

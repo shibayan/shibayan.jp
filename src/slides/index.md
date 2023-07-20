@@ -1,10 +1,10 @@
 ---
-title: 'Slides'
+title: 'Presentations'
 ---
 
 ## 2022
 
-## .NET Conf 2022 Recap 福岡
+### .NET Conf 2022 Recap 福岡
 
 <Slide id="dotnetconf2022" />
 

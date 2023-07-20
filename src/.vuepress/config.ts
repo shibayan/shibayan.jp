@@ -6,7 +6,7 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 
 export default defineUserConfig({
   title: 'Tatsuro Shibamura',
-  description: 'Tatsuro Shibamura a.k.a. shibayan / Developer / Azure Serverless / Windows on ARM Enthusiast',
+  description: 'Tatsuro Shibamura (shibayan) / Developer / Azure Serverless / Windows on ARM Enthusiast',
   plugins: [
     googleAnalyticsPlugin({
       'id': 'UA-772309-13'
@@ -20,8 +20,11 @@ export default defineUserConfig({
     lastUpdated: false,
     sidebar: false,
     navbar: [
-      { text: 'Slides', link: '/slides/' },
-      { text: 'GitHub', link: 'https://github.com/shibayan/shibayan.jp', target: '_blank' }
-    ]
+      { text: 'Presentations', link: '/slides/' },
+      { text: 'Become a sponsor', link: 'https://github.com/sponsors/shibayan', target: '_blank' }
+    ],
+    themePlugins: {
+      externalLinkIcon: false
+    }
   })
 });

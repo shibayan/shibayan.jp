@@ -9,7 +9,7 @@ title: ''
 **Tatsuro Shibamura (shibayan)**<br>
 Developer / Microsoft MVP for Microsoft Azure / Windows on ARM Enthusiast
 
-| <img align="center" src="https://github-readme-stats.vercel.app/api?username=shibayan&show_icons=true&include_all_commits=true&hide_border=true" alt="Anurag's github stats" /> | <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=shibayan&layout=compact&hide_border=true" /> |
+| <img align="center" src="https://github-readme-stats.vercel.app/api?username=shibayan&show_icons=true&include_all_commits=true&hide_border=true" alt="shibayan's github stats" /> | <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=shibayan&layout=compact&hide_border=true" /> |
 | ------------- | ------------- |
 
 ## Awards

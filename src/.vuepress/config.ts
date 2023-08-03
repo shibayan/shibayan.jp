@@ -6,7 +6,7 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 
 export default defineUserConfig({
   title: 'Tatsuro Shibamura',
-  description: 'Tatsuro Shibamura (shibayan) / Developer / Azure Serverless / Windows on ARM Enthusiast',
+  description: 'Developer / Microsoft MVP for Microsoft Azure / Windows on ARM Enthusiast',
   plugins: [
     googleAnalyticsPlugin({
       'id': 'UA-772309-13'

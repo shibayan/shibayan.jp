@@ -14,7 +14,7 @@ Developer / Microsoft MVP for Microsoft Azure / Windows on ARM Enthusiast
 
 ## Awards
 
-[![Microsoft MVP](./images/microsoft-most-valuable-professional-mvp.png)](https://mvp.microsoft.com/en-us/PublicProfile/4032161)
+[![Microsoft MVP](./images/microsoft-most-valuable-professional-mvp.png)](https://mvp.microsoft.com/en-US/mvp/profile/e1ba70c0-3c9a-e411-93f2-9cb65495d3c4)
 
 <dl>
   <dt>Microsoft MVP for Microsoft Azure</dt>

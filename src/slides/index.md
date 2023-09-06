@@ -2,6 +2,12 @@
 title: 'Presentations'
 ---
 
+## 2023
+
+### GEEKERS NITE #3
+
+<Slide id="geekersnite3" />
+
 ## 2022
 
 ### .NET Conf 2022 Recap 福岡

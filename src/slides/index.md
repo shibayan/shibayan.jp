@@ -2,6 +2,12 @@
 title: 'Presentations'
 ---
 
+## 2024
+
+### Global Azure 2024 in Fukuoka
+
+<Slide id="globalazure2024" />
+
 ## 2023
 
 ### GEEKERS NITE #3

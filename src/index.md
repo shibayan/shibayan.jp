@@ -29,7 +29,7 @@ Developer / Microsoft MVP for Microsoft Azure / Windows on Arm Enthusiast
 
 <dl>
   <dt>Microsoft Top Partner Engineer Award &lt;Azure&gt;</dt>
-  <dd>2023 ~ 2024</dd>
+  <dd>2023 ~ 2025</dd>
 </dl>
 
 ## Certifications

@@ -46,6 +46,7 @@ Developer / Microsoft MVP for Microsoft Azure / Windows on Arm Enthusiast
 ## Connections
 
 [![Twitter](./images/twitter.png)](https://twitter.com/shibayan)
+[![Bluesky](./images/bluesky.png)](https://bsky.app/profile/shibayan.jp)
 [![GitHub](./images/github.png)](https://github.com/shibayan)
 [![LinkedIn](./images/linkedin.png)](https://www.linkedin.com/in/tatsuro-shibamura/)
 [![Hatena Blog](./images/hatenablog.png)](https://blog.shibayan.jp)

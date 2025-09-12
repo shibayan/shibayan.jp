@@ -2,17 +2,13 @@ import * as path from 'path';
 import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
-import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 
 export default defineUserConfig({
   title: 'Tatsuro Shibamura',
-  description: 'Developer / Microsoft MVP for Microsoft Azure / Windows on ARM Enthusiast',
+  description: 'Developer / Microsoft MVP for Microsoft Azure / Windows on Arm Enthusiast',
   bundler: viteBundler(),
   plugins: [
-    googleAnalyticsPlugin({
-      'id': 'UA-772309-13'
-    }),
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, './components'),
     })
@@ -24,9 +20,6 @@ export default defineUserConfig({
     navbar: [
       { text: 'Presentations', link: '/slides/' },
       { text: 'Become a sponsor', link: 'https://github.com/sponsors/shibayan', target: '_blank' }
-    ],
-    themePlugins: {
-      externalLinkIcon: false
-    }
+    ]
   })
 });

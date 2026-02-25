@@ -23,6 +23,7 @@ import iconLinkedin from '../images/linkedin.png';
 import iconHatena from '../images/hatenablog.png';
 import iconDev from '../images/dev.png';
 import iconSpeakerdeck from '../images/speakerdeck.png';
+import heroImage from '../images/hero.jpg';
 
 const awards = [
   {
@@ -99,31 +100,43 @@ const expertise = [
 <Base>
   <Header currentPath="/" />
 
-  <main class="max-w-4xl mx-auto px-6 pt-28 pb-12">
-    <!-- Hero -->
+  <main class="max-w-4xl mx-auto px-6 pt-20 pb-12">
+    <!-- Hero with overlay -->
     <section class="text-center mb-24">
-      <div class="flex justify-center gap-5 mb-8">
+      <div class="relative -mx-6 sm:mx-0 overflow-hidden sm:rounded-2xl mb-10">
         <Image
-          src={avatarJpg}
-          alt="Tatsuro Shibamura"
-          class="w-32 h-32 rounded-full object-cover ring-4 ring-gray-100 shadow-lg"
-          width="128"
-          height="128"
+          src={heroImage}
+          alt=""
+          class="w-full h-96 sm:h-80 md:h-96 object-cover"
+          widths={[640, 960, 1280]}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 896px"
         />
-        <Image
-          src={avatarAlt}
-          alt="Tatsuro Shibamura"
-          class="w-32 h-32 rounded-full object-cover ring-4 ring-gray-100 shadow-lg"
-          width="128"
-          height="128"
-        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 flex flex-col items-center pb-6 sm:pb-8">
+          <div class="group relative w-24 h-24 sm:w-28 sm:h-28 mb-4 cursor-pointer">
+            <Image
+              src={avatarJpg}
+              alt="Tatsuro Shibamura"
+              class="absolute inset-0 w-full h-full rounded-full object-cover ring-4 ring-white/80 shadow-lg transition-opacity duration-300 group-hover:opacity-0"
+              width="128"
+              height="128"
+            />
+            <Image
+              src={avatarAlt}
+              alt="Tatsuro Shibamura"
+              class="absolute inset-0 w-full h-full rounded-full object-cover ring-4 ring-white/80 shadow-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+              width="128"
+              height="128"
+            />
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-1 drop-shadow-lg">
+            Tatsuro Shibamura
+          </h1>
+          <p class="text-white/80 text-base sm:text-lg drop-shadow-md">
+            Software Engineer / Microsoft MVP for Azure
+          </p>
+        </div>
       </div>
-      <h1 class="text-4xl font-bold tracking-tight text-gray-900 mb-3">
-        Tatsuro Shibamura
-      </h1>
-      <p class="text-gray-500 text-lg max-w-lg mx-auto leading-relaxed">
-        Software Engineer / Microsoft MVP for Azure
-      </p>
       <p class="text-gray-400 text-sm max-w-xl mx-auto mt-4 leading-relaxed">
         Cloud-native development and Azure infrastructure specialist with 15+ years of experience.
         Actively contributing to the developer community through technical writing, open-source projects,

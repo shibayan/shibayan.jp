@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
-import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 import avatarJpg from '../images/shibayan.jpg';
@@ -60,7 +59,7 @@ const connections = [
   { img: iconBluesky, url: 'https://bsky.app/profile/shibayan.jp', label: 'Bluesky', handle: '@shibayan.jp' },
   { img: iconGithub, url: 'https://github.com/shibayan', label: 'GitHub', handle: 'shibayan' },
   { img: iconLinkedin, url: 'https://www.linkedin.com/in/tatsuro-shibamura/', label: 'LinkedIn', handle: 'tatsuro-shibamura' },
-  { img: iconHatena, url: 'https://blog.shibayan.jp', label: 'Blog', handle: 'blog.shibayan.jp' },
+  { img: iconHatena, url: 'https://blog.shibayan.jp', label: 'Hatena Blog', handle: 'blog.shibayan.jp' },
   { img: iconDev, url: 'https://dev.to/shibayan', label: 'DEV', handle: 'shibayan' },
   { img: iconSpeakerdeck, url: 'https://speakerdeck.com/shibayan', label: 'SpeakerDeck', handle: 'shibayan' },
 ];
@@ -99,9 +98,7 @@ const expertise = [
 ---
 
 <Base>
-  <Header currentPath="/" />
-
-  <main class="max-w-4xl mx-auto px-6 pt-20 pb-12">
+  <main class="max-w-4xl mx-auto px-6 pt-8 pb-12">
     <!-- Hero with overlay -->
     <section class="text-center mb-24">
       <div class="relative -mx-6 sm:mx-0 overflow-hidden sm:rounded-2xl mb-10">
@@ -148,8 +145,16 @@ const expertise = [
           <span class={`px-3 py-1 rounded-full text-xs font-medium ${item.color}`}>{item.label}</span>
         ))}
       </div>
-      <div class="flex justify-center gap-3 mt-8">
-        <a href="https://github.com/shibayan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gray-900 text-white text-sm font-medium hover:bg-gray-700 transition-colors">
+      <div class="flex flex-wrap justify-center gap-3 mt-8">
+        <a href="https://blog.shibayan.jp" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gray-900 text-white text-sm font-medium hover:bg-gray-700 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          Blog
+        </a>
+        <a href="/slides/" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gray-900 text-white text-sm font-medium hover:bg-gray-700 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+          Presentations
+        </a>
+        <a href="https://github.com/shibayan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-gray-200 text-gray-700 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           GitHub
         </a>

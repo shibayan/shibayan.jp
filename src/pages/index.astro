@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -102,15 +103,15 @@ const expertise = [
     <!-- Hero -->
     <section class="text-center mb-24">
       <div class="flex justify-center gap-5 mb-8">
-        <img
-          src={avatarJpg.src}
+        <Image
+          src={avatarJpg}
           alt="Tatsuro Shibamura"
           class="w-32 h-32 rounded-full object-cover ring-4 ring-gray-100 shadow-lg"
           width="128"
           height="128"
         />
-        <img
-          src={avatarAlt.src}
+        <Image
+          src={avatarAlt}
           alt="Tatsuro Shibamura"
           class="w-32 h-32 rounded-full object-cover ring-4 ring-gray-100 shadow-lg"
           width="128"
@@ -156,11 +157,11 @@ const expertise = [
           <div class="flex gap-6 items-start p-5 rounded-2xl bg-gray-50/80 border border-gray-100">
             {award.url ? (
               <a href={award.url} target="_blank" rel="noopener noreferrer" class="shrink-0 hover:scale-105 transition-transform">
-                <img src={award.badge.src} alt="" class="w-20 h-20 object-contain" />
+                <Image src={award.badge} alt="" class="w-20 h-20 object-contain" width={80} height={80} />
               </a>
             ) : (
               <div class="shrink-0">
-                <img src={award.badge.src} alt="" class="w-20 h-20 object-contain" />
+                <Image src={award.badge} alt="" class="w-20 h-20 object-contain" width={80} height={80} />
               </div>
             )}
             <div class="space-y-2 min-w-0">
@@ -228,7 +229,7 @@ const expertise = [
             rel="noopener noreferrer"
             class="group flex flex-col items-center gap-3 p-4 rounded-2xl border border-gray-100 bg-white hover:bg-gray-50 hover:border-gray-200 hover:shadow-sm transition-all"
           >
-            <img src={cert.img.src} alt={cert.name} class="w-16 h-16 object-contain group-hover:scale-105 transition-transform" />
+            <Image src={cert.img} alt={cert.name} class="w-16 h-16 object-contain group-hover:scale-105 transition-transform" width={64} height={64} />
             <div class="text-center">
               <p class="text-xs font-medium text-gray-700 leading-tight">{cert.name}</p>
               {cert.level && <p class="text-[10px] text-gray-400 mt-0.5">{cert.level}</p>}
@@ -252,7 +253,7 @@ const expertise = [
             rel="noopener noreferrer"
             class="group flex items-center gap-4 px-5 py-4 rounded-2xl border border-gray-100 bg-white hover:bg-gray-50 hover:border-gray-200 hover:shadow-sm transition-all"
           >
-            <img src={conn.img.src} alt="" class="w-8 h-8 object-contain shrink-0 group-hover:scale-110 transition-transform" />
+            <Image src={conn.img} alt="" class="w-8 h-8 object-contain shrink-0 group-hover:scale-110 transition-transform" width={32} height={32} />
             <div class="min-w-0">
               <p class="text-sm font-medium text-gray-900">{conn.label}</p>
               <p class="text-xs text-gray-400 truncate">{conn.handle}</p>

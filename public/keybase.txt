@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/shibayan
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://shibayan.jp
+  * I am shibayan (https://keybase.io/shibayan) on keybase.
+  * I have a public key with fingerprint 9EEB 6CEA A731 18A3 645C  00A5 C417 C369 A12F CEAE
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010122c4c598cba044dbd7abefbbd0061ae2cbdf8313e3d697a839ea84282d0a376a0a",
+            "fingerprint": "9eeb6ceaa73118a3645c00a5c417c369a12fceae",
+            "host": "keybase.io",
+            "key_id": "c417c369a12fceae",
+            "kid": "010122c4c598cba044dbd7abefbbd0061ae2cbdf8313e3d697a839ea84282d0a376a0a",
+            "uid": "f127dcedd377373d6d686aca4aa76019",
+            "username": "shibayan"
+        },
+        "service": {
+            "hostname": "shibayan.jp",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1458107726,
+    "expire_in": 157680000,
+    "prev": "aeff5cecaa1d4a088e393330936b377944262fe8e43b21ac31d8a4984593c858",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.51
+Comment: https://keybase.io/crypto
+
+yMIlAnicrVJbSBRRGF5vaWKhD/UgWTaFJS0yM2cuZzZSCfNGagpaobCdOXPWndVm
+193VNDGMopsXKimEIArDsshEe0jK8hqJlg9JYlSaQtSDkVvSk9UZqZfosfNyOP//
+fd/5vp9/eE2IJTLIiJs4ilhld9DYwKVKS9HHpdxaRnVrNYytlikjKxcp14jPby/T
+NcbGsBzL8TwWsKhArCJWEDRVk5FKHKqqsazEIcJjVXNAwAECNEmREQQKQVDgIa+x
+CMgSYhFjZRy6UUq8Hq9u+KmsQogqYYKQDDgOIiAJImZZJGKBkzGQFMTxDtomlOh0
++0wGNaciH0nS3bRGH/YVe//A/2fflStyDo6XNUw0DcgykClek6CEMBJoAonlFBPo
+I14DHSYU7XPqKqpBBlNnZWi1SsfEHKyZ5C9EkstDqR6v2+/G7nLacPr9HpvJ89d4
+TOARotp/S9hV3dDoFCmhinh9uttgbBxFYr9uanKCCDlWlnnJypBqj+4ldt1EiLIE
+WXrMb0gVlUTE4RAxwQhxmoBYCAlQAACsAiSVxlMEgZd4B4FEACrPIQw4DSJBgYKo
+AAxFyJihKgw3YxOpTVRqxtFLDeSv9BKmbrC/JNQSFGlZFRZsbpclcnX0n52bbo+w
+nGfznG2ldyvzl/ua36bNpIafjs1Qsrr3bKzIiXrafqZrCv8oLkqaCQwsHYzbmpyT
+ubMg/djcrmTp/ffhpgOFPyP27R0jCQnt2c/j62NGdmyuHwmbqe5rVufmGwJ5IGVV
+dmNG/538herXzUZnl16Sd9L7+Fxt2qnyd+OJDaH70wOf4497UrZsuOwJvIlvaQ26
+eeJRSPShYpc18WH3ZEmdy3X2RXl0xdDit4XZQF9v8IXR2LVf7g1/Tb2Y+7LlQWZj
+7eDss5j5jmZlalNUZmdrzLosvL6gZfC2NN6Rqze5Crc/eWVp6wGji9vK4Ej4wtBy
+7+Q155X7Hyau2q7fSLd8utUz/QsQFEL/
+=TP9x
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/shibayan
+
+==================================================================

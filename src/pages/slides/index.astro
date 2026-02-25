@@ -1,0 +1,68 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Slide from '../../components/Slide.astro';
+
+const presentations = [
+  {
+    year: 2024,
+    talks: [
+      { title: 'Global Azure 2024 in Fukuoka', id: 'globalazure2024' },
+    ],
+  },
+  {
+    year: 2023,
+    talks: [
+      { title: 'GEEKERS NITE #3', id: 'geekersnite3' },
+    ],
+  },
+  {
+    year: 2022,
+    talks: [
+      { title: '.NET Conf 2022 Recap 福岡', id: 'dotnetconf2022' },
+      { title: 'Digital Decision 2022 Engineer Night', id: 'engineernight' },
+    ],
+  },
+  {
+    year: 2021,
+    talks: [
+      { title: 'HashiTalks: Japan', id: 'hashitalks' },
+      { title: 'Cosmos DB Conf', id: 'cosmosdbconf' },
+      { title: 'Hack Azure! #5', id: 'hackazure5' },
+    ],
+  },
+  {
+    year: 2020,
+    talks: [
+      { title: '.NET Conf Online', id: 'dotnetconf' },
+    ],
+  },
+];
+---
+
+<Base title="Presentations - Tatsuro Shibamura">
+  <Header currentPath="/slides/" />
+
+  <main class="max-w-3xl mx-auto px-6 pt-24 pb-8">
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900 mb-12">Presentations</h1>
+
+    {presentations.map((group) => (
+      <div class="mb-12">
+        <h2 class="text-xl font-semibold text-gray-900 mb-6 pb-2 border-b border-gray-100">
+          {group.year}
+        </h2>
+        <div class="space-y-8">
+          {group.talks.map((talk) => (
+            <div>
+              <h3 class="text-base font-medium text-gray-700 mb-3">{talk.title}</h3>
+              <Slide src={`/slides/${talk.id}/`} />
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </main>
+
+  <Footer />
+</Base>

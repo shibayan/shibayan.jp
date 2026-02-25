@@ -61,6 +61,38 @@ const connections = [
   { img: iconDev, url: 'https://dev.to/shibayan', label: 'DEV', handle: 'shibayan' },
   { img: iconSpeakerdeck, url: 'https://speakerdeck.com/shibayan', label: 'SpeakerDeck', handle: 'shibayan' },
 ];
+
+const ossProjects = [
+  {
+    name: 'keyvault-acmebot',
+    description: 'Automated ACME SSL/TLS certificate management built around Azure Key Vault. Supports Azure App Service, CDN, Front Door, and Application Gateway.',
+    url: 'https://github.com/shibayan/keyvault-acmebot',
+    stars: '1,000+',
+    tags: ['Azure Functions', 'Key Vault', "Let's Encrypt", 'ACME'],
+  },
+  {
+    name: 'Sharprompt',
+    description: 'Interactive command-line based application framework for C#. Provides a rich set of prompts for building beautiful CLI applications.',
+    url: 'https://github.com/shibayan/Sharprompt',
+    stars: '840+',
+    tags: ['C#', '.NET', 'CLI', 'Interactive'],
+  },
+  {
+    name: 'appservice-acmebot',
+    description: 'Automated ACME SSL/TLS certificates issuer for Azure App Service (Web Apps / Functions / Containers).',
+    url: 'https://github.com/shibayan/appservice-acmebot',
+    stars: '410+',
+    tags: ['Azure Functions', 'App Service', "Let's Encrypt", 'ACME'],
+  },
+];
+
+const expertise = [
+  { label: 'Azure', color: 'bg-blue-50 text-blue-700' },
+  { label: 'Cloud Native', color: 'bg-emerald-50 text-emerald-700' },
+  { label: 'ASP.NET / C#', color: 'bg-violet-50 text-violet-700' },
+  { label: 'Windows on Arm', color: 'bg-amber-50 text-amber-700' },
+  { label: 'Open Source', color: 'bg-rose-50 text-rose-700' },
+];
 ---
 
 <Base>
@@ -88,11 +120,20 @@ const connections = [
       <h1 class="text-4xl font-bold tracking-tight text-gray-900 mb-3">
         Tatsuro Shibamura
       </h1>
-      <p class="text-gray-500 text-lg max-w-md mx-auto leading-relaxed">
-        Developer / Microsoft MVP for Microsoft Azure<br class="hidden sm:inline" />
-        / Windows on Arm Enthusiast
+      <p class="text-gray-500 text-lg max-w-lg mx-auto leading-relaxed">
+        Software Engineer / Microsoft MVP for Azure
       </p>
-      <div class="flex justify-center gap-3 mt-6">
+      <p class="text-gray-400 text-sm max-w-xl mx-auto mt-4 leading-relaxed">
+        Cloud-native development and Azure infrastructure specialist with 15+ years of experience.
+        Actively contributing to the developer community through technical writing, open-source projects,
+        and conference presentations as a long-tenured Microsoft MVP.
+      </p>
+      <div class="flex flex-wrap justify-center gap-2 mt-6">
+        {expertise.map((item) => (
+          <span class={`px-3 py-1 rounded-full text-xs font-medium ${item.color}`}>{item.label}</span>
+        ))}
+      </div>
+      <div class="flex justify-center gap-3 mt-8">
         <a href="https://github.com/shibayan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gray-900 text-white text-sm font-medium hover:bg-gray-700 transition-colors">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           GitHub
@@ -106,7 +147,10 @@ const connections = [
 
     <!-- Awards -->
     <section class="mb-20">
-      <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-8">Awards</h2>
+      <div class="mb-8">
+        <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-400">Awards</h2>
+        <p class="text-xs text-gray-400 mt-1">Recognized by Microsoft for contributions to the developer community since 2011.</p>
+      </div>
       <div class="space-y-6">
         {awards.map((award) => (
           <div class="flex gap-6 items-start p-5 rounded-2xl bg-gray-50/80 border border-gray-100">
@@ -132,9 +176,50 @@ const connections = [
       </div>
     </section>
 
+    <!-- Open Source -->
+    <section class="mb-20">
+      <div class="mb-8">
+        <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-400">Open Source</h2>
+        <p class="text-xs text-gray-400 mt-1">Notable projects I maintain to help developers automate cloud infrastructure.</p>
+      </div>
+      <div class="space-y-4">
+        {ossProjects.map((project) => (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group block p-5 rounded-2xl border border-gray-100 bg-white hover:bg-gray-50 hover:border-gray-200 hover:shadow-sm transition-all"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="min-w-0">
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+                  <p class="text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{project.name}</p>
+                  <span class="inline-flex items-center gap-0.5 text-[10px] text-gray-400 font-medium">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    {project.stars}
+                  </span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">{project.description}</p>
+                <div class="flex flex-wrap gap-1.5 mt-3">
+                  {project.tags.map((tag) => (
+                    <span class="px-2 py-0.5 rounded-md bg-gray-100 text-[10px] font-medium text-gray-500">{tag}</span>
+                  ))}
+                </div>
+              </div>
+              <svg class="w-4 h-4 text-gray-300 shrink-0 mt-1 group-hover:text-gray-500 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
     <!-- Certifications -->
     <section class="mb-20">
-      <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-8">Certifications</h2>
+      <div class="mb-8">
+        <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-400">Certifications</h2>
+        <p class="text-xs text-gray-400 mt-1">Professional certifications validating cloud and DevOps expertise.</p>
+      </div>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {certifications.map((cert) => (
           <a
@@ -155,7 +240,10 @@ const connections = [
 
     <!-- Connections -->
     <section class="mb-8">
-      <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-8">Connections</h2>
+      <div class="mb-8">
+        <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-400">Connections</h2>
+        <p class="text-xs text-gray-400 mt-1">Find me on these platforms — feel free to reach out.</p>
+      </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {connections.map((conn) => (
           <a

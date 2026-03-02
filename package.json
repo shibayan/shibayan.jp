@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/vite": "4.2.1",
-    "astro": "5.17.3",
+    "astro": "5.18.0",
     "tailwindcss": "4.2.1"
   },
   "volta": {

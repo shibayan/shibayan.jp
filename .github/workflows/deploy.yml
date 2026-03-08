@@ -1,11 +1,8 @@
-name: Publish
+name: Deploy
 
 on:
   push:
     branches: [ master ]
-
-env:
-  AZURE_WEBAPP_NAME: shibayan
 
 jobs:
   build:
@@ -44,9 +41,19 @@ jobs:
         name: dist
         path: dist
 
-    - name: Deploy to Azure Web App
-      uses: azure/webapps-deploy@84a80cfe7e9889f35148ed88c307e6e93bf02578 # v3.0.7
+    - name: Cache SWA CLI
+      id: cache-swa-cli
+      uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
       with:
-        app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: dist
+        key: swa-${{ runner.arch }}-${{ runner.os }}
+        path: |
+          ~/.swa
+          /usr/local/bin/swa
+          /usr/local/lib/node_modules/@azure/static-web-apps-cli
+
+    - name: Install SWA CLI
+      if: steps.cache-swa-cli.outputs.cache-hit != 'true'
+      run: npm install -g @azure/static-web-apps-cli
+
+    - name: Deploy to Static Web App
+      run: swa deploy ./dist --env production --deployment-token ${{ secrets.AZURE_STATIC_WEB_APP_DEPLOYMENT_TOKEN }}

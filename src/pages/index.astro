@@ -106,8 +106,11 @@ const expertise = [
           src={heroImage}
           alt=""
           class="w-full h-96 sm:h-80 md:h-96 object-cover"
-          widths={[640, 960, 1280]}
+          widths={[480, 768, 1024]}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 896px"
+          quality={70}
+          loading="eager"
+          fetchpriority="high"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
         <div class="absolute bottom-0 inset-x-0 flex flex-col items-center pb-6 sm:pb-8">

@@ -2,7 +2,7 @@
   "$schema": "https://www.schemastore.org/staticwebapp.config.json",
   "globalHeaders": {
     "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
-    "Cache-Control": "no-cache, no-store, must-revalidate"
+    "Cache-Control": "public, max-age=0, must-revalidate"
   },
   "routes": [
     {

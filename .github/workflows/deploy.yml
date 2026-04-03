@@ -41,19 +41,8 @@ jobs:
         name: dist
         path: dist
 
-    - name: Cache SWA CLI
-      id: cache-swa-cli
-      uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
-      with:
-        key: swa-${{ runner.arch }}-${{ runner.os }}
-        path: |
-          ~/.swa
-          /usr/local/bin/swa
-          /usr/local/lib/node_modules/@azure/static-web-apps-cli
-
-    - name: Install SWA CLI
-      if: steps.cache-swa-cli.outputs.cache-hit != 'true'
-      run: npm install -g @azure/static-web-apps-cli
-
     - name: Deploy to Static Web App
-      run: swa deploy ./dist --env production --deployment-token ${{ secrets.AZURE_STATIC_WEB_APP_DEPLOYMENT_TOKEN }}
+      uses: shibayan/swa-deploy@a8c5552f3647cedf8a023f0363c65af660067ecb # v1.0.0
+      with:
+        app_location: ./dist
+        deployment_token: ${{ secrets.AZURE_STATIC_WEB_APP_DEPLOYMENT_TOKEN }}

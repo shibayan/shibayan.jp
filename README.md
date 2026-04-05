@@ -8,7 +8,7 @@ https://shibayan.jp
 
 ## 技術スタック
 
-- [Astro](https://astro.build/) v5
+- [Astro](https://astro.build/) v6
 - [Tailwind CSS](https://tailwindcss.com/) v4
 - [Node.js](https://nodejs.org/) (Volta で管理)
 

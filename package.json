@@ -11,11 +11,14 @@
   "author": "shibayan",
   "license": "ISC",
   "dependencies": {
-    "@tailwindcss/vite": "4.2.2",
+    "@tailwindcss/vite": "4.2.4",
     "astro": "6.1.8",
-    "tailwindcss": "4.2.2"
+    "tailwindcss": "4.2.4"
   },
   "volta": {
     "node": "24.15.0"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }

@@ -182,9 +182,9 @@ const expertise = [
         <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-600">Awards</h2>
         <p class="text-xs text-gray-600 mt-1">Recognized by Microsoft for contributions to the developer community since 2011.</p>
       </div>
-      <div class="space-y-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {awards.map((award) => (
-          <div class="flex gap-6 items-start p-5 rounded-2xl bg-gray-50/80 border border-gray-100">
+          <div class="flex flex-col items-center gap-4 p-5 rounded-2xl bg-gray-50/80 border border-gray-100">
             {award.url ? (
               <a href={award.url} target="_blank" rel="noopener noreferrer" class="shrink-0 hover:scale-105 transition-transform">
                 <Image src={award.badge} alt="" class="w-20 h-20 object-contain" width={80} height={80} />
@@ -194,7 +194,7 @@ const expertise = [
                 <Image src={award.badge} alt="" class="w-20 h-20 object-contain" width={80} height={80} />
               </div>
             )}
-            <div class="space-y-2 min-w-0">
+            <div class="w-full space-y-2 min-w-0 text-center">
               {award.entries.map((entry, i) => (
                 <div class:list={[i > 0 && 'pt-2 border-t border-gray-200/60']}>
                   <p class="font-medium text-gray-900 text-sm leading-snug">{entry.title}</p>
@@ -213,7 +213,7 @@ const expertise = [
         <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-600">Open Source</h2>
         <p class="text-xs text-gray-600 mt-1">Notable projects I actively maintain as open source contributions.</p>
       </div>
-      <div class="space-y-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {ossProjects.map((project) => (
           <a
             href={project.url}

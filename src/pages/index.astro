@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 import Footer from '../components/Footer.astro';
 
 import avatarJpg from '../images/profile/avatar.jpg';
-import avatarAlt from '../images/profile/avatar-alt.png';
+import avatarAlt from '../images/profile/avatar-alt.jpg';
 import mvpBadge from '../images/awards/microsoft-mvp.png';
 import topPartnerBadge from '../images/awards/microsoft-top-partner-engineer-award.png';
 import certAzureAdmin from '../images/certifications/microsoft-azure-administrator-associate.png';
@@ -116,7 +116,7 @@ const expertise = [
           class="w-full h-96 sm:h-80 md:h-96 object-cover"
           widths={[480, 768, 896, 1024]}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 896px"
-          quality={70}
+          quality={80}
           loading="eager"
           fetchpriority="high"
         />
@@ -129,6 +129,7 @@ const expertise = [
               class="absolute inset-0 w-full h-full rounded-full object-cover ring-4 ring-white/80 shadow-lg transition-opacity duration-300 group-hover:opacity-0"
               width="128"
               height="128"
+              densities={[1, 2, 3]}
             />
             <Image
               src={avatarAlt}
@@ -136,6 +137,7 @@ const expertise = [
               class="absolute inset-0 w-full h-full rounded-full object-cover ring-4 ring-white/80 shadow-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               width="128"
               height="128"
+              densities={[1, 2, 3]}
             />
           </div>
           <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-1 drop-shadow-lg">
@@ -187,12 +189,12 @@ const expertise = [
         {awards.map((award) => (
           <div class="flex flex-col items-center gap-4 p-5 rounded-2xl bg-gray-50/80 border border-gray-100">
             {award.url ? (
-              <a href={award.url} target="_blank" rel="noopener noreferrer" class="shrink-0 hover:scale-105 transition-transform">
-                <Image src={award.badge} alt="" class="w-20 h-20 object-contain" width={80} height={80} />
+              <a href={award.url} target="_blank" rel="noopener noreferrer" class="shrink-0">
+                <Image src={award.badge} alt="" class="w-20 h-20 object-contain" width={80} height={80} densities={[1, 2, 3]} />
               </a>
             ) : (
               <div class="shrink-0">
-                <Image src={award.badge} alt="" class="w-20 h-20 object-contain" width={80} height={80} />
+                <Image src={award.badge} alt="" class="w-20 h-20 object-contain" width={80} height={80} densities={[1, 2, 3]} />
               </div>
             )}
             <div class="w-full space-y-2 min-w-0 text-center">
@@ -260,7 +262,7 @@ const expertise = [
             rel="noopener noreferrer"
             class="group flex flex-col items-center gap-3 p-4 rounded-2xl border border-gray-100 bg-white hover:bg-gray-50 hover:border-gray-200 hover:shadow-sm transition-all"
           >
-            <Image src={cert.img} alt={cert.name} class="w-16 h-16 object-contain group-hover:scale-105 transition-transform" width={64} height={64} />
+            <Image src={cert.img} alt={cert.name} class="w-16 h-16 object-contain group-hover:scale-105 transition-transform" width={64} height={64} densities={[1, 2, 3]} />
             <div class="text-center">
               <p class="text-xs font-medium text-gray-700 leading-tight">{cert.name}</p>
               {cert.level && <p class="text-[10px] text-gray-600 mt-0.5">{cert.level}</p>}
@@ -285,7 +287,7 @@ const expertise = [
             class="group flex items-center gap-4 px-5 py-4 rounded-2xl border border-gray-100 bg-white hover:bg-gray-50 hover:border-gray-200 hover:shadow-sm transition-all"
           >
             {conn.img ? (
-              <Image src={conn.img} alt="" class="w-8 h-8 object-contain shrink-0 group-hover:scale-110 transition-transform" width={32} height={32} />
+              <Image src={conn.img} alt="" class="w-8 h-8 object-contain shrink-0 group-hover:scale-110 transition-transform" width={32} height={32} densities={[1, 2, 3]} />
             ) : (
               <svg class="w-8 h-8 text-gray-400 shrink-0 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
             )}

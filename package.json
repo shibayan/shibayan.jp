@@ -12,13 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/vite": "4.3.1",
-    "astro": "6.4.8",
+    "astro": "7.0.2",
     "tailwindcss": "4.3.1"
   },
   "volta": {
-    "node": "24.16.0"
-  },
-  "overrides": {
-    "vite": "^7"
+    "node": "24.18.0"
   }
 }

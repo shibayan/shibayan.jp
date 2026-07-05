@@ -5,16 +5,22 @@ interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  jsonLd?: object | object[];
 }
 
 const {
   title = 'Tatsuro Shibamura | Azure Specialist, OSS & Tech Blog',
   description = 'Software Engineer and Microsoft MVP for Azure. Cloud-native development, open-source projects, and technical community contributions.',
   ogImage = '/ogp.png',
+  jsonLd,
 } = Astro.props;
 
 const ogImageUrl = new URL(ogImage, Astro.site!).href;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site!).href;
+
+const structuredData = jsonLd
+  ? JSON.stringify(Array.isArray(jsonLd) ? jsonLd : [jsonLd])
+  : null;
 ---
 
 <!doctype html>
@@ -43,6 +49,10 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site!).href;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
     <meta name="twitter:site" content="@shibayan" />
+
+    {structuredData && (
+      <script type="application/ld+json" is:inline set:html={structuredData} />
+    )}
   </head>
   <body class="bg-white text-gray-900 antialiased">
     <slot />

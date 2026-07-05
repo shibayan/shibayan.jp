@@ -103,9 +103,70 @@ const expertise = [
   { label: 'Windows on Arm', color: 'bg-amber-50 text-amber-700' },
   { label: 'Open Source', color: 'bg-rose-50 text-rose-700' },
 ];
+
+const personId = new URL('#person', Astro.site!).href;
+const websiteId = new URL('#website', Astro.site!).href;
+const avatarUrl = new URL(avatarJpg.src, Astro.site!).href;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': websiteId,
+      url: Astro.site!.href,
+      name: 'shibayan.jp',
+      description:
+        'Profile site of Tatsuro Shibamura — Software Engineer and Microsoft MVP for Azure.',
+      inLanguage: 'en',
+      publisher: { '@id': personId },
+    },
+    {
+      '@type': 'ProfilePage',
+      '@id': new URL('#webpage', Astro.site!).href,
+      url: Astro.site!.href,
+      name: 'Tatsuro Shibamura | Azure Specialist, OSS & Tech Blog',
+      isPartOf: { '@id': websiteId },
+      about: { '@id': personId },
+      mainEntity: { '@id': personId },
+      inLanguage: 'en',
+    },
+    {
+      '@type': 'Person',
+      '@id': personId,
+      name: 'Tatsuro Shibamura',
+      alternateName: 'shibayan',
+      url: Astro.site!.href,
+      image: avatarUrl,
+      email: 'me@shibayan.jp',
+      jobTitle: 'Software Engineer',
+      description:
+        'Cloud-native development and Azure infrastructure specialist with 15+ years of experience. Founder of Polymind and a long-tenured Microsoft MVP for Azure.',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Polymind',
+        url: 'https://polymind.jp',
+      },
+      knowsAbout: [
+        'Microsoft Azure',
+        'Cloud Native',
+        'ASP.NET',
+        'C#',
+        '.NET',
+        'Windows on Arm',
+        'Open Source Software',
+        'DevOps',
+      ],
+      award: awards.flatMap((award) => award.entries.map((entry) => entry.title)),
+      sameAs: connections
+        .filter((conn) => !conn.url.startsWith('mailto:'))
+        .map((conn) => conn.url),
+    },
+  ],
+};
 ---
 
-<Base>
+<Base jsonLd={jsonLd}>
   <main class="max-w-4xl mx-auto px-6 sm:pt-4 pb-12">
     <!-- Hero with overlay -->
     <section class="text-center mb-24">

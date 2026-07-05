@@ -38,9 +38,46 @@ const presentations = [
     ],
   },
 ];
+
+const pageUrl = new URL('/slides/', Astro.site!).href;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: Astro.site!.href },
+        { '@type': 'ListItem', position: 2, name: 'Presentations', item: pageUrl },
+      ],
+    },
+    {
+      '@type': 'CollectionPage',
+      '@id': pageUrl,
+      url: pageUrl,
+      name: 'Presentations - Tatsuro Shibamura',
+      description:
+        'Conference talks and community presentations on Azure, .NET, and cloud-native topics.',
+      inLanguage: 'en',
+      isPartOf: { '@id': new URL('#website', Astro.site!).href },
+      about: { '@id': new URL('#person', Astro.site!).href },
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: presentations
+          .flatMap((group) => group.talks)
+          .map((talk, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: talk.title,
+            url: new URL(`/slides/${talk.id}/`, Astro.site!).href,
+          })),
+      },
+    },
+  ],
+};
 ---
 
-<Base title="Presentations - Tatsuro Shibamura">
+<Base title="Presentations - Tatsuro Shibamura" jsonLd={jsonLd}>
   <main class="max-w-3xl mx-auto px-6 pt-10 pb-8">
     <a href="/" class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-900 transition-colors mb-8">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>

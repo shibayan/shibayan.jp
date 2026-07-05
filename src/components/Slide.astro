@@ -1,15 +1,25 @@
 ---
 interface Props {
   src: string;
+  title?: string;
+  className?: string;
 }
 
-const { src } = Astro.props;
+const {
+  src,
+  title = 'Presentation slides',
+  className = '',
+} = Astro.props;
 ---
 
-<div class="relative w-full aspect-video">
+<div class:list={[
+  'relative w-full aspect-video',
+  className,
+]}>
   <iframe
     src={src}
-    class="absolute inset-0 w-full h-full rounded-lg border-0"
+    title={title}
+    class="absolute inset-0 h-full w-full rounded-lg border-0"
     loading="lazy"
     allowfullscreen
   ></iframe>

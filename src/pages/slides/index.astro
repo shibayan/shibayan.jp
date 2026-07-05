@@ -7,39 +7,80 @@ const presentations = [
   {
     year: 2024,
     talks: [
-      { title: 'Global Azure 2024 in Fukuoka', id: 'globalazure2024' },
+      {
+        title: 'Global Azure 2024 in Fukuoka',
+        id: 'globalazure2024',
+        summary: 'Cost-aware Azure architecture choices and practical optimization points.',
+      },
     ],
   },
   {
     year: 2023,
     talks: [
-      { title: 'GEEKERS NITE #3', id: 'geekersnite3' },
+      {
+        title: 'GEEKERS NITE #3',
+        id: 'geekersnite3',
+        summary: 'Practical ways to make Windows developer environments easier to rebuild.',
+      },
     ],
   },
   {
     year: 2022,
     talks: [
-      { title: '.NET Conf 2022 Recap 福岡', id: 'dotnetconf2022' },
-      { title: 'Digital Decision 2022 Engineer Night', id: 'engineernight' },
+      {
+        title: '.NET Conf 2022 Recap 福岡',
+        id: 'dotnetconf2022',
+        summary: '.NET 7-era Windows app development, including WinUI, WebView2, and Native AOT.',
+      },
+      {
+        title: 'Digital Decision 2022 Engineer Night',
+        id: 'engineernight',
+        summary: 'Modern cloud architecture patterns using Microsoft Azure managed services.',
+      },
     ],
   },
   {
     year: 2021,
     talks: [
-      { title: 'HashiTalks: Japan', id: 'hashitalks' },
-      { title: 'Cosmos DB Conf', id: 'cosmosdbconf' },
-      { title: 'Hack Azure! #5', id: 'hackazure5' },
+      {
+        title: 'HashiTalks: Japan',
+        id: 'hashitalks',
+        summary: 'How to develop and contribute to Terraform Provider for Azure.',
+      },
+      {
+        title: 'Cosmos DB Conf',
+        id: 'cosmosdbconf',
+        summary: 'Design and implementation details for Cosmos DB Change Feed-centric architecture.',
+      },
+      {
+        title: 'Hack Azure! #5',
+        id: 'hackazure5',
+        summary: 'App Service and Azure Functions updates for Azure serverless developers.',
+      },
     ],
   },
   {
     year: 2020,
     talks: [
-      { title: '.NET Conf Online', id: 'dotnetconf' },
+      {
+        title: '.NET Conf Online',
+        id: 'dotnetconf',
+        summary: 'A recap-style party talk for the .NET 5 release and .NET Conf 2020.',
+      },
     ],
   },
 ];
 
 const pageUrl = new URL('/slides/', Astro.site!).href;
+const allTalks = presentations.flatMap((group) =>
+  group.talks.map((talk) => ({
+    ...talk,
+    year: group.year,
+    href: `/slides/${talk.id}/`,
+  })),
+);
+const pageDescription =
+  'Conference talks and community presentations on Azure, .NET, Windows, and cloud-native topics.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -56,20 +97,19 @@ const jsonLd = {
       '@id': pageUrl,
       url: pageUrl,
       name: 'Presentations - Tatsuro Shibamura',
-      description:
-        'Conference talks and community presentations on Azure, .NET, and cloud-native topics.',
+      description: pageDescription,
       inLanguage: 'en',
       isPartOf: { '@id': new URL('#website', Astro.site!).href },
       about: { '@id': new URL('#person', Astro.site!).href },
       mainEntity: {
         '@type': 'ItemList',
-        itemListElement: presentations
-          .flatMap((group) => group.talks)
+        itemListElement: allTalks
           .map((talk, index) => ({
             '@type': 'ListItem',
             position: index + 1,
             name: talk.title,
-            url: new URL(`/slides/${talk.id}/`, Astro.site!).href,
+            description: talk.summary,
+            url: new URL(talk.href, Astro.site!).href,
           })),
       },
     },
@@ -77,29 +117,44 @@ const jsonLd = {
 };
 ---
 
-<Base title="Presentations - Tatsuro Shibamura" jsonLd={jsonLd}>
+<Base title="Presentations - Tatsuro Shibamura" description={pageDescription} jsonLd={jsonLd}>
   <main class="max-w-3xl mx-auto px-6 pt-10 pb-8">
     <a href="/" class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-900 transition-colors mb-8">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
       Home
     </a>
     <h1 class="text-3xl font-bold tracking-tight text-gray-900 mb-2">Presentations</h1>
-    <p class="text-gray-600 text-sm mb-12">Conference talks and community presentations on Azure, .NET, and cloud-native topics.</p>
+    <p class="text-gray-600 text-sm leading-relaxed mb-12">{pageDescription}</p>
 
     {presentations.map((group) => (
-      <div class="mb-12">
+      <section class="mb-12">
         <h2 class="text-xl font-semibold text-gray-900 mb-6 pb-2 border-b border-gray-100">
           {group.year}
         </h2>
-        <div class="space-y-8">
+        <div class="space-y-10">
           {group.talks.map((talk) => (
-            <div>
-              <h3 class="text-base font-medium text-gray-900 mb-3">{talk.title}</h3>
-              <Slide src={`/slides/${talk.id}/`} />
-            </div>
+            <article>
+              <div class="mb-3 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-base font-medium text-gray-900">{talk.title}</h3>
+                  <p class="mt-1 text-sm leading-relaxed text-gray-600">{talk.summary}</p>
+                </div>
+                <a
+                  href={`/slides/${talk.id}/`}
+                  class="inline-flex shrink-0 items-center gap-1 text-sm text-gray-500 transition-colors hover:text-gray-900"
+                >
+                  Open slides
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7m0 0H8m9 0v9"/></svg>
+                </a>
+              </div>
+              <Slide
+                src={`/slides/${talk.id}/`}
+                title={`${talk.title} slides`}
+              />
+            </article>
           ))}
         </div>
-      </div>
+      </section>
     ))}
   </main>
 

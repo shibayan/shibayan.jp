@@ -11,9 +11,9 @@
   "author": "shibayan",
   "license": "ISC",
   "dependencies": {
-    "@tailwindcss/vite": "4.3.2",
-    "astro": "7.0.7",
-    "tailwindcss": "4.3.2"
+    "@tailwindcss/vite": "4.3.3",
+    "astro": "7.1.1",
+    "tailwindcss": "4.3.3"
   },
   "volta": {
     "node": "24.18.0"

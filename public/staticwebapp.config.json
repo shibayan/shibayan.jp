@@ -13,9 +13,8 @@
     },
     {
       "route": "/slides/*",
-      "headers": {
-        "Cache-Control": "public, max-age=2592000"
-      }
+      "redirect": "https://speakerdeck.com/shibayan",
+      "statusCode": 301
     }
   ],
   "responseOverrides": {

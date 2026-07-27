@@ -45,8 +45,6 @@ src/
 ├── layouts/      # レイアウト
 ├── pages/        # ページ
 └── styles/       # グローバルスタイル
-public/
-└── slides/       # スライド資料
 ```
 
 ## ライセンス

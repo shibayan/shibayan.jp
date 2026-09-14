@@ -43,11 +43,11 @@ const awards = [
 
 const certifications = [
   { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/6652CEA7471DDA02?sharingId=AZ-MVP-4032161', name: 'Azure Administrator' },
+  { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/B19AD611BD0E6F51?sharingId=AZ-MVP-4032161', name: 'Azure AI Apps and Agents Developer' },
+  { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/1733BCFFC0B6AD3D?sharingId=AZ-MVP-4032161', name: 'Azure AI Cloud Developer' },
+  { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/69F41D621DCA9394?sharingId=AZ-MVP-4032161', name: 'Azure Data Scientist' },
   { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/37D86DAAB94EE646?sharingId=AZ-MVP-4032161', name: 'Azure Developer' },
   { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/5F71E0FF0FECE5AE?sharingId=AZ-MVP-4032161', name: 'Azure Security Engineer' },
-  { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/69F41D621DCA9394?sharingId=AZ-MVP-4032161', name: 'Azure Data Scientist Associate' },
-  { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/B19AD611BD0E6F51?sharingId=AZ-MVP-4032161', name: 'Azure AI Apps and Agents Developer Associate' },
-  { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/1733BCFFC0B6AD3D?sharingId=AZ-MVP-4032161', name: 'Azure AI Cloud Developer Associate' },
   { img: certExpertBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/51AA1DAB34D049EC?sharingId=AZ-MVP-4032161', name: 'Azure Solutions Architect' },
   { img: certExpertBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/BB429824B398AB50?sharingId=AZ-MVP-4032161', name: 'DevOps Engineer' },
   { img: certSpecialtyBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/45D7D8419D447A4?sharingId=AZ-MVP-4032161', name: 'Azure Cosmos DB Developer' },
@@ -76,14 +76,14 @@ const ossProjects = [
   },
   {
     name: 'Sharprompt',
-    description: 'Interactive command-line based application framework for C#. Provides a rich set of prompts for building beautiful CLI applications.',
+    description: 'An interactive prompt library for .NET that makes it easy to build command-line interfaces in C#.',
     url: 'https://github.com/shibayan/Sharprompt',
     stars: '840+',
     tags: ['C#', '.NET', 'CLI', 'Interactive'],
   },
   {
     name: 'WinQuickLook',
-    description: 'Bring macOS Quick Look to Windows - Preview files instantly with a single keystroke. Lightweight file previewer for images, documents, videos, and more.',
+    description: 'A lightweight file previewer that brings the macOS Quick Look experience to Windows. Preview images, documents, videos, and more with a single keystroke.',
     url: 'https://github.com/polymind-inc/WinQuickLook',
     stars: '380+',
     tags: ['C#', 'Windows', 'Quick Look', 'File Preview'],
@@ -142,7 +142,7 @@ const jsonLd = {
       email: 'me@shibayan.jp',
       jobTitle: 'Software Engineer',
       description:
-        'Cloud-native development and Azure infrastructure specialist with 15+ years of experience. Founder of Polymind and a long-tenured Microsoft MVP for Azure.',
+        'Software engineer specializing in cloud-native development and Azure infrastructure, with over 15 years of experience. Founder of Polymind and a Microsoft MVP since 2011.',
       worksFor: {
         '@type': 'Organization',
         name: 'Polymind',
@@ -211,10 +211,9 @@ const jsonLd = {
         </div>
       </div>
       <p class="text-gray-600 text-sm max-w-2xl mx-auto mt-4 leading-relaxed">
-        Cloud-native development and Azure infrastructure specialist with 15+ years of experience.
-        Founder of <a href="https://polymind.jp" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-gray-900 underline underline-offset-2 transition-colors">Polymind</a>.
-        Actively contributing to the developer community through technical writing, open-source projects,
-        and conference presentations as a long-tenured Microsoft MVP.
+        I'm a software engineer specializing in cloud-native development and Azure infrastructure,
+        with over 15 years of experience. A Microsoft MVP since 2011, I contribute to the developer
+        community through technical writing, open-source projects, and conference talks.
       </p>
       <div class="flex flex-wrap justify-center gap-2 mt-6">
         {expertise.map((item) => (
@@ -272,7 +271,7 @@ const jsonLd = {
     <section class="mb-20">
       <div class="mb-8">
         <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-600">Open Source</h2>
-        <p class="text-xs text-gray-600 mt-1">Notable projects I actively maintain as open source contributions.</p>
+        <p class="text-xs text-gray-600 mt-1">Selected open-source projects I actively maintain.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {ossProjects.map((project) => (

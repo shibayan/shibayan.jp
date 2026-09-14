@@ -7,14 +7,11 @@ import avatarJpg from '../images/profile/avatar.jpg';
 import avatarAlt from '../images/profile/avatar-alt.jpg';
 import mvpBadge from '../images/awards/microsoft-mvp.png';
 import topPartnerBadge from '../images/awards/microsoft-top-partner-engineer-award.png';
-import certAzureAdmin from '../images/certifications/microsoft-azure-administrator-associate.png';
-import certAzureDev from '../images/certifications/microsoft-azure-developer-associate.png';
-import certAzureSec from '../images/certifications/microsoft-azure-security-engineer-associate.png';
-import certAzureArch from '../images/certifications/microsoft-azure-solutions-architect-expert.png';
-import certDevOps from '../images/certifications/microsoft-devops-engineer-expert.png';
-import certCosmosDb from '../images/certifications/microsoft-azure-cosmos-db-developer-specialty.png';
-import certGhActions from '../images/certifications/github-actions.png';
-import certGhSecurity from '../images/certifications/github-advanced-security.png';
+import certAssociateBadge from '../images/certifications/microsoft-certified-associate-badge.svg';
+import certExpertBadge from '../images/certifications/microsoft-certified-expert-badge.svg';
+import certSpecialtyBadge from '../images/certifications/microsoft-certified-specialty-badge.svg';
+import certGhActions from '../images/certifications/github-actions.svg';
+import certGhCopilot from '../images/certifications/github-copilot.svg';
 import iconX from '../images/connect/x.png';
 import iconBluesky from '../images/connect/bluesky.png';
 import iconGithub from '../images/connect/github.png';
@@ -45,14 +42,17 @@ const awards = [
 ];
 
 const certifications = [
-  { img: certAzureAdmin, url: 'https://www.credly.com/badges/f53f2068-650b-4da9-92a7-37799179996a/public_url', name: 'Azure Administrator', level: 'Associate' },
-  { img: certAzureDev, url: 'https://www.credly.com/badges/b11ad743-c32d-49ee-9a35-c9988ff8405e/public_url', name: 'Azure Developer', level: 'Associate' },
-  { img: certAzureSec, url: 'https://www.credly.com/badges/d495a3e9-04b6-4649-99d1-d0ce24a57590/public_url', name: 'Azure Security Engineer', level: 'Associate' },
-  { img: certAzureArch, url: 'https://www.credly.com/badges/1fbdd367-f4c1-4985-b3f0-c2b65eee748f/public_url', name: 'Azure Solutions Architect', level: 'Expert' },
-  { img: certDevOps, url: 'https://www.credly.com/badges/4ab50eff-b218-4a5d-90fa-13075198717c/public_url', name: 'DevOps Engineer', level: 'Expert' },
-  { img: certCosmosDb, url: 'https://www.credly.com/badges/9faf0ae5-308a-495f-a5da-174ef319b187/public_url', name: 'Azure Cosmos DB Developer', level: 'Specialty' },
-  { img: certGhActions, url: 'https://www.credly.com/badges/ca969fde-9a0e-4198-9541-2458e932dd98/public_url', name: 'GitHub Actions', level: '' },
-  { img: certGhSecurity, url: 'https://www.credly.com/badges/bdbb4a67-2494-43dd-af28-371329a05f41/public_url', name: 'GitHub Advanced Security', level: '' },
+  { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/6652CEA7471DDA02?sharingId=AZ-MVP-4032161', name: 'Azure Administrator' },
+  { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/37D86DAAB94EE646?sharingId=AZ-MVP-4032161', name: 'Azure Developer' },
+  { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/5F71E0FF0FECE5AE?sharingId=AZ-MVP-4032161', name: 'Azure Security Engineer' },
+  { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/69F41D621DCA9394?sharingId=AZ-MVP-4032161', name: 'Azure Data Scientist Associate' },
+  { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/B19AD611BD0E6F51?sharingId=AZ-MVP-4032161', name: 'Azure AI Apps and Agents Developer Associate' },
+  { img: certAssociateBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/1733BCFFC0B6AD3D?sharingId=AZ-MVP-4032161', name: 'Azure AI Cloud Developer Associate' },
+  { img: certExpertBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/51AA1DAB34D049EC?sharingId=AZ-MVP-4032161', name: 'Azure Solutions Architect' },
+  { img: certExpertBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/BB429824B398AB50?sharingId=AZ-MVP-4032161', name: 'DevOps Engineer' },
+  { img: certSpecialtyBadge, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/45D7D8419D447A4?sharingId=AZ-MVP-4032161', name: 'Azure Cosmos DB Developer' },
+  { img: certGhActions, url: 'https://www.credly.com/badges/ca969fde-9a0e-4198-9541-2458e932dd98/public_url', name: 'GitHub Actions' },
+  { img: certGhCopilot, url: 'https://learn.microsoft.com/api/credentials/share/en-us/tatsuro-shibamura/54DA89F305E3D80?sharingId=AZ-MVP-4032161', name: 'GitHub Copilot' },
 ];
 
 const connections = [
@@ -323,7 +323,6 @@ const jsonLd = {
             <Image src={cert.img} alt={cert.name} class="w-16 h-16 object-contain group-hover:scale-105 transition-transform" width={64} height={64} densities={[1, 2, 3]} />
             <div class="text-center">
               <p class="text-xs font-medium text-gray-700 leading-tight">{cert.name}</p>
-              {cert.level && <p class="text-[10px] text-gray-600 mt-0.5">{cert.level}</p>}
             </div>
           </a>
         ))}
